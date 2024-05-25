@@ -7,7 +7,6 @@ import Link from 'next/link';
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const router = useRouter();
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -16,13 +15,13 @@ export default function Login() {
     console.log('Email:', email);
     console.log('Password:', password);
 
-    router.push('/');
+    router.push('/pages/admproducts');
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center">Login Adm</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
@@ -60,9 +59,9 @@ export default function Login() {
             >
               Login
             </button>
-            <Link legacyBehavior href="/pages/cadastro">
+            <Link legacyBehavior href="/pages/signup">
               <a className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
-                Cadastra
+                Cadastro
               </a>
             </Link>
           </div>
